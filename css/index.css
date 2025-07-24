@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/* li {
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* h1,
+h2,
+h3 {
+    font-family: math;
+} */
+
+/* עיצוב התפריט */
+header {
+    background-color: rgb(240, 240, 240);
+    height: 10vh;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 4px solid darkcyan;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    justify-content: space-between;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+}
+
+nav {
+    display: flex;
+    column-gap: 1px;
+    margin-left: 30px;
+}
+
+nav a {
+    background-color: darkcyan;
+    /* padding: 10px; */
+    /* padding-bottom: 2px; */
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    padding-bottom: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 17px;
+    margin-top: 5px;
+
+}
+
+nav a:hover {
+    background-color: rgba(0, 139, 139, 0.884);
+}
+
+
+.search-container {
+    margin: 3vh;
+}
+
+input[type=search] {
+    padding: 8px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.search-container button {
+    float: right;
+    padding: 8px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}

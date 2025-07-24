@@ -1,0 +1,87 @@
+#loginPage {
+    display: flex;
+    margin: 5vh 5vw 5vh 25vw;
+
+
+    flex-direction: column;
+}
+
+#loginForm {
+    border: solid 2px darkcyan;
+    padding: 20px;
+    border-radius: 15px;
+    width: 55vw;
+    min-width: 320px;
+    max-height: 450px;
+    flex-direction: column;
+    /* display: none; */
+}
+
+
+#tab{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginH2{
+    display: flex;
+    justify-content: center;
+}
+
+.loginH2 a{
+    text-decoration: none;
+    color: darkcyan;
+}
+
+/* Full-width input fields */
+#loginPage input[type=text],
+#loginPage input[type=password],
+#loginPage input[type=email] {
+    width: 45vw;
+    min-width: 300px;
+    padding: 15px;
+    margin: 15px 0 15px 0;
+    display: inline-block;
+    border: none;
+    /* background: #f1f1f1; */
+    border: 1.5px solid #858080;
+    border-radius: 5px;
+}
+
+#loginPage input[type=text]:focus,
+#loginPage input[type=password]:focus {
+    /* background-color: #ffffff; */
+    outline: none;
+    border: solid 2px;
+}
+
+#loginPage button,
+#loginPage input[type=submit] {
+    background-color: darkcyan;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 4px;
+}
+
+#loginPage button:hover,
+#loginPage input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+#loginPage .btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .show {
+    display: block;
+}
+
+.hide {
+    display: none;
+} */

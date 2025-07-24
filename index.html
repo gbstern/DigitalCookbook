@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/recipesDetail.css">
+    <link rel="stylesheet" href="css/recipes.css">
+    <link rel="stylesheet" href="css/myRecipes.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" id="home" onclick="showPage('homePage', 'home')">home</a>
+            <a href="#" id="recipes" onclick="showPage('recipesPage', 'recipes')">recipes</a>
+            <a href="#" id="myRecipes" onclick="showMyRecipe()">my recipes</a>
+            <a href="#" id="login" onclick="showPage('loginPage', 'login')">login</a>
+        </nav>
+        <div class="search-container">
+            <input type="search" id="searchNav" placeholder="Search Recipes..." name="search" oninput="search()">
+            <button type="submit"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+            </button>
+        </div>
+
+    </header>
+    <main>
+        <div id="homePage" class="page">
+            <video autoplay muted loop id="myVideo" width="100%">
+                <source src="img/video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- דף המתכונים -->
+        <div id="recipesPage" class="page">
+            <h1 id="recipesHeader">Are Best Recipes</h1>
+            <div id="recipesDiv">
+                <!-- <div class="recipe">
+                    <div id="img">
+                        <img src="img/img2.jpg" width="100%" id="food">
+                        <img src="img/heart.png" id="heart" title="add to your recipes"
+                            onclick="alert('your recipe was added')">
+                    </div>
+                    <p>Parve | 20 Cookies | 30 Minuts</p>
+                    <h2>4 ingredients Sugar Cookies</h2>
+                </div> -->
+
+            </div>
+        </div>
+
+        <!-- דף פירוט המתכון -->
+        <div id="recipesDetailPage" class="page">
+
+            <div id="title">
+            </div>
+            <div id="recipesDetails">
+                <div id="image">
+                    <!-- <img src="img/cookies.jpg" width="40%" id="picture"> -->
+                </div>
+                <!-- <table id="table">
+                    <tr id="top">
+                        <td>Parve</td>
+                        <td class="mid">30 Cookies</td>
+                        <td> 20 Minuts</td>
+                    </tr>
+                    <tr>
+                        <td>Easy</td>
+                        <td class="mid">Allergies</td>
+                        <td>Diets</td>
+                    </tr>
+                </table> -->
+                <div id="ingredients">
+                    <h1>Ingredients</h1>
+                    <ul id="ingrList">
+                    </ul>
+
+                </div>
+                <div id="instructions">
+                    <h1>Directions</h1>
+                    <ol id="instList">
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- דף המתכונים שלי -->
+        <div id="myRecipesPage" class="page">
+            <h1 id="myRecipesHeader">My Best Recipes</h1>
+            <div id="myRecipesDiv">
+                <div class="myRecipe">
+                    <!-- <div id="myImg">
+                        <img src="img/img1.JPG" width="100%" id="food">
+                        <p>Parve | 20 Cookies | 30 Minuts</p>
+                    </div> -->
+                    <div id="myRecipesDetails">
+                        <!-- <h1 id="myTitle">4 ingredients Sugar Cookies</h1>
+
+                        <button class="accordion" id="ingr" onclick="openAccordion(0)">Ingredients</button> -->
+                        <div id="panel">
+                            <ul id="myIngredients">
+                                <!-- <h2>Cookies</h2>
+                                <li>3 cups flour</li>
+                                <li>2 stiks margarine</li>
+                                <li>1 egg</li>
+                                <li>1 cup Sugar</li>
+                                <h2>Frosting</h2>
+                                <li>1 egg white</li>
+                                <li>1 cup confectioners sugar</li> -->
+                            </ul>
+                        </div>
+                        <!-- <button class="accordion" onclick="openAccordion(1)">Directions</button> -->
+                        <!-- <div id="panel">
+                            <ol>
+                                <h2>prepare the cookies</h2>
+                                <li>In a mixer beat margarine and sugar well, Add eggs and beat untill smooth.</li>
+                                <li>Pour in flour and mix untill soft dough forms. dough may be a bit sticky.</li>
+                                <li>Sprinkle some flour in a baking sheet, roll out dough between two sheets.</li>
+                                <li>Cut out cookies with cookie cutter, bake on 180 for 15 minut</li>
+                                <h2>make the icing</h2>
+                                <li>beat eggwhite untill peaks form.</li>
+                                <li>add sugar gentely and continue beating for 2 minut.</li>
+                                <li>add desired colors of food coloring and mix well</li>
+                            </ol>
+                        </div> -->
+                    </div>
+                    <!-- <div id="icons">
+                        <svg onclick="deletedRecipeClick(1)" width="30" height="30" fill="currentColor"
+                            class="bi bi-trash3" viewBox="0 0 16 16">
+                            <path
+                                d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+                        </svg>
+                        <svg onclick="printList()" width="30" height="30" fill="currentColor" class="bi bi-printer"
+                            viewBox="0 0 16 16">
+                            <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1" />
+                            <path
+                                d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1" />
+                        </svg>
+                    </div> -->
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="myRecipesPageError" class="page">
+            <h1>You need to <a onclick="showPage('loginPage', 'login')">login</a> to access My Recipes</h1>
+        </div>
+
+        <!-- דף הוספת מתכון שלי -->
+        <div id="addRecipePage" class="page">
+            <!-- <h1>add your recipe</h1> -->
+        </div>
+
+        <!-- דף כניסה לאתר -->
+        <div id="loginPage" class="page">
+
+            <form action="" id="loginForm" onsubmit="onLoginSubmit(event)">
+                <div class="loginH2">
+                    <a href="#" onclick="showForm('loginPage' ,'regirsterPage')">
+                        <h2>Login</h2>
+                    </a>
+                    <a href="#" onclick="showForm('regirsterPage' ,'loginPage')">
+                        <h2>/Register</h2>
+                    </a>
+                </div>
+                <div id="tab">
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Email..." name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Password..." name="psw" id="psw2" required>
+                    <div>
+                        <input type="checkbox" onclick="showPsw2()">Show Password
+                    </div>
+
+                    <div id="login_error" style="color: red;"></div>
+
+                </div>
+                <div class="btn">
+                    <button type="submit">Login</button>
+                </div>
+
+
+
+
+            </form>
+        </div>
+
+        <!-- דף הרשמה לאתר -->
+        <div id="regirsterPage" class="page">
+
+            <form id="regForm" action="" onsubmit="onRegisterSubmit(event)" class="hide">
+                <div class="registerH2">
+                    <a href="#" onclick="showForm('loginPage' ,'regirsterPage')">
+                        <h2>Login/</h2>
+                    </a>
+                    <a href="#" onclick="showForm('regirsterPage' ,'loginPage')">
+                        <h2>Register</h2>
+                    </a>
+                </div>
+                <!-- One "tab" for each step in the form: -->
+                <div class="tab">
+                    <!-- <p>Name:</p> -->
+                    <label for="fName" class="firstName" title="השדות המסומנות ב* חובה">First Name *</label>
+                    <input type="text" placeholder="First name..." id="fName" name="fName" required>
+                    <label for="lName">Last Name</label>
+                    <input type="text" placeholder="Last name..." id="lName" name="lName">
+                </div>
+                <div class="tab">
+                    <!-- <p>Contact Info:</p> -->
+                    <label for="email" class="email" title="השדות המסומנות ב* חובה">Email *</label>
+                    <input type="email" placeholder="E-mail..." id="email" name="email" required>
+                    <label for="phone">Phone</label>
+                    <input type="text" placeholder="Phone..." id="phone" name="phone">
+                </div>
+                <div class="tab">
+                    <!-- <p>Login Info:</p> -->
+                    <label for="userName" class="userName" title="השדות המסומנות ב* חובה">Username *</label>
+                    <input type="text" placeholder="User name..." id="userName" name="userName" required>
+                    <label for="psw" class="passWord" title="השדות המסומנות ב* חובה">Password *</label>
+                    <input type="password" placeholder="Password..." id="psw" name="psw" required onchange="">
+                    <input type="password" placeholder="Repeat Password..." id="repeatPsw" name="repeatPsw" required
+                        onchange="">
+                    <div>
+                        <input type="checkbox" onclick="showPsw()">Show Password
+                    </div>
+                </div>
+                <div>
+                    <div class="btn">
+
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                        <button type="submit" id="submit">submit</button>
+                    </div>
+                    <div id="password_error" style="color: red;"></div>
+                    <div id="register_error" style="color: red;"></div>
+                    <div id="no_error"></div>
+                    <div style="text-align:center;margin-top:40px;">
+                        <!-- Circles which indicates the steps of the form: -->
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                    </div>
+            </form>
+        </div>
+
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

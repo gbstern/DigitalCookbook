@@ -1,0 +1,159 @@
+#myRecipesPageError {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#myRecipesPageError h1 {
+    text-align: center;
+    background-color: white;
+    padding: 15vh;
+    box-shadow: 0 0 10px lightgrey;
+    width: 40vw;
+    border-radius: 20px;
+}
+
+
+#myRecipesDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 60px;
+    padding: 45px;
+}
+
+#myRecipesHeader {
+    text-align: center;
+}
+
+.myRecipe {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+}
+
+.myRecipe * {
+    text-align: center;
+    margin: 0;
+}
+
+
+
+.myRecipe #myImg #picture {
+    width: 60%;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.myRecipe #myImg {
+    width: 40vw;
+    padding: 8px;
+}
+
+.myRecipe #myImg *{
+    padding: 8px;
+    border-radius: 30px;
+}
+
+#myRecipesDetails {
+    width: 50vw;
+    padding: 8px;
+}
+
+#myTitle{
+    padding: 10px;
+}
+
+
+#myRecipesDetails h2 {
+    padding: 20px;
+}
+
+#icons {
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+#icons svg{
+    padding: 10px;
+}
+
+#icons svg:hover{
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    transition: 0.4s;
+    border-radius: 10px;
+
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+#panel, #panel2 {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 10px;
+}
+
+#panel ul , #panel2 ul{
+    list-style: none;
+}
+
+@media print {
+    #icons,
+    header{
+        display: none;
+    }
+    #panel, #panel2{
+        max-height: max-content;
+    }
+    p, li{
+        font-size: small;
+    }
+}

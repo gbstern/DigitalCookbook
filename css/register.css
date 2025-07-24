@@ -1,0 +1,109 @@
+#regirsterPage {
+    display: flex;
+    margin: 5vh 5vw 5vh 25vw;
+    flex-direction: column;
+}
+
+#regForm {
+    border: solid 2px darkcyan;
+    padding: 20px;
+    border-radius: 15px;
+    width: 55vw;
+    min-width: 320px;
+    max-height: 450px;
+    /* display: none; */
+}
+
+#regirsterPage .tab {
+    display: none;
+    flex-direction: column;
+}
+
+.registerH2{
+    display: flex;
+    justify-content: center;
+}
+
+.registerH2 a{
+    text-decoration: none;
+    color: darkcyan;
+}
+
+/* Full-width input fields */
+#regirsterPage input[type=text],
+#regirsterPage input[type=password],
+#regirsterPage input[type=email] {
+    width: 45vw;
+    min-width: 300px;
+    padding: 15px;
+    margin: 15px 0 15px 0;
+    display: inline-block;
+    border: none;
+    /* background: #f1f1f1; */
+    border: 1.5px solid #858080;
+    border-radius: 5px;
+}
+
+#regirsterPage input[type=text]:focus,
+#regirsterPage input[type=password]:focus {
+    /* background-color: #ffffff; */
+    outline: none;
+    border: solid 2px;
+}
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+    opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: darkcyan;
+}
+
+#regirsterPage .btn {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 5px;
+}
+
+#regirsterPage button,
+#regirsterPage input[type=submit] {
+    background-color: darkcyan;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 4px;
+}
+
+#regirsterPage button:hover,
+#regirsterPage input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+#regirsterPage #prevBtn {
+    background-color: #bbbbbb;
+}
+
+/* .show {
+    display: block;
+}
+
+.hide {
+    display: none;
+} */
